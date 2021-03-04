@@ -300,7 +300,8 @@ class ExtendedTextSelectionOverlay {
 
     final Rect editingRegion = Rect.fromPoints(
       renderObject.localToGlobal(Offset.zero),
-      renderObject.localToGlobal(renderObject.size.bottomRight(Offset.zero)),
+      renderObject
+          .localToGlobal(renderObject.size.bottomRight(Offset.zero)),
     );
 
     final bool isMultiline =
@@ -332,7 +333,6 @@ class ExtendedTextSelectionOverlay {
           midpoint,
           endpoints,
           selectionDelegate,
-          null,
           null,
         ),
       ),
